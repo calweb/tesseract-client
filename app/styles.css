@@ -1,0 +1,36 @@
+body {
+  font-family: "Roboto", sans-serif; }
+
+mtg-card {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  padding: 0;
+  transition: margin 0.5s ease-in-out; }
+  mtg-card img {
+    min-width: 100%; }
+  mtg-card .info {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #f8f8f8;
+    opacity: 0;
+    border-radius: 4%; }
+    mtg-card .info h3 {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+    mtg-card .info p {
+      padding: 0;
+      width: 100%; }
+  mtg-card:hover .info {
+    animation: fade-in 0.6s;
+    display: block;
+    padding: 10px;
+    opacity: 1; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MTG: App</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='vendor/Mana/css/mana.min.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body ng-app="mtg-app">
+  <ng-view></ng-view>
+
+  <!-- libs -->
+  <script src="vendor/lodash/lodash.js" charset="utf-8"></script>
+  <script src="vendor/angular/angular.js" charset="utf-8"></script>
+  <script src="vendor/angular-route/angular-route.js" charset="utf-8"></script>
+
+  <!-- app files -->
+  <script src="app.js" charset="utf-8"></script>
+
+  <!-- cards -->
+  <script src="cards/cards.js" charset="utf-8"></script>
+  <script src="cards/cards.ctr.js" charset="utf-8"></script>
+  <script src="cards/cards.svc.js" charset="utf-8"></script>
+  <script src="cards/cards.directive.js" charset="utf-8"></script>
+</body>
+</html>
