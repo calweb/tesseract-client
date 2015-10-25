@@ -4,13 +4,20 @@ GOAL: Create a desktop application that you can play Magic the gathering with yo
 
 ## entities
 
-- cards
+- cards (likely not)
 - decks
 - users
 - battlefield
 - stats
 
 ## tech
+
+Server: nodejs
+The architecture of the app will be api driven by a nodejs json api, using token based authentication, potentially with 3rd-party oauth providers (to help drive finding friends that want to play?)
+
+Client(s): electron, ionic, web
+
+I want to first make this an electron application that can be used cross platform.  Using Ionic or another mobile web tech framework, I'd like to use ionic, but maybe not to play, but have a limited featureset.  If down the road, there is a need, then a web application can be deployed which is essentially what the electron app is doing.
 
 - electron
 - nodejs
