@@ -2,9 +2,10 @@
 
 GOAL: Create a desktop application that you can play Magic the gathering with your friends.
 
+
 ## entities
 
-- cards (likely not)
+- cards (likely not as there are pretty robust api's available for all cards)
 - decks
 - users
 - battlefield
@@ -58,6 +59,7 @@ users can find cards by:
 - users can CRUD decks using any card
 - users can check manna curve for current deck
 - users can playtest their deck in an artificial environment
+- down the road it may be cool to check pricing for cards
 
 ### Game play
 

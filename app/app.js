@@ -21,7 +21,7 @@
 
     })
     .controller('MainCtrl', function ($scope) {
-      $scope.message = "Welcome to my app!";
+      $scope.message = "Tesseract";
     });
 
 })();

@@ -1,0 +1,14 @@
+<img ng-src="{{card.editions[0].image_url}}" alt="" />
+<div class="info">
+  <h3>{{card.name}} {{card.cost}} </h3>
+  <h4>Type: <span ng-repeat="type in card.types">{{type}} </span></h4>
+  <h4 ng-show="card.subtypes.length">Subtype: <span ng-repeat="subtype in card.subtypes">{{subtype}} </span></h4>
+  <h5>{{card.editions[0].rarity}}</h5>
+  <p>
+    {{card.text}}
+  </p>
+  <div class="btn-group">
+      <button ng-click="action()" class="btn btn-primary">{{actionText}}</button>
+  </div>
+
+</div>

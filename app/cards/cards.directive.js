@@ -6,9 +6,11 @@
     .directive('mtgCard', function () {
       return {
         restrict: 'E',
-        templateUrl: 'cards/views/card.tmpl.html',
+        templateUrl: 'cards/views/card.directive.html',
         scope: {
-          card: '='
+          card: '=',
+          action: '&',
+          actionText: '@'
         }
       };
     });
