@@ -1,17 +1,9 @@
-{
-  "name": "mtg-app",
+{  "name": "Tesseract",
   "version": "0.0.1",
   "engines": {
     "node": ">=4"
   },
-  "electronVersion": "0.34.0",
   "description": "Play Magic the Gathering with Friends",
-  "main": "index.js",
-  "scripts": {
-    "test": "xo",
-    "start": "electron .",
-    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/calweb/mtg-app.git"
@@ -27,19 +19,28 @@
     "url": "https://github.com/calweb/mtg-app/issues"
   },
   "homepage": "https://github.com/calweb/mtg-app",
-  "dependencies": {
-    "electron-debug": "^0.2.1"
-  },
   "devDependencies": {
-    "electron-packager": "^5.1.0",
-    "electron-prebuilt": "^0.34.1",
-    "xo": "^0.10.0"
+    "asar": "^0.7.2",
+    "electron-prebuilt": "^0.34.0",
+    "fs-jetpack": "^0.7.0",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-util": "^3.0.6",
+    "q": "^1.4.1",
+    "rollup": "^0.16.1",
+    "tree-kill": "^0.1.1",
+    "yargs": "^3.15.0"
   },
-  "xo": {
-    "esnext": true,
-    "envs": [
-      "node",
-      "browser"
-    ]
+  "optionalDependencies": {
+    "appdmg": "^0.3.2",
+    "rcedit": "^0.3.0"
+  },
+  "scripts": {
+    "postinstall": "node ./tasks/app_npm_install",
+    "app-install": "node ./tasks/app_npm_install",
+    "build": "gulp build",
+    "release": "gulp release --env=production",
+    "start": "node ./tasks/start",
+    "test": "node ./tasks/start --env=test"
   }
 }

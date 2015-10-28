@@ -1,24 +1,24 @@
 {
-  "name": "mtg-app",
-  "homepage": "https://github.com/calweb/mtg-app",
+  "name": "Tesseract",
+  "description": "",
+  "main": "",
   "authors": [
     "Calvin Webster <calweb@gmail.com>"
   ],
-  "description": "",
-  "main": "",
-  "moduleType": [],
   "license": "MIT",
+  "homepage": "https://github.com/szwacz/electron-boilerplate",
+  "moduleType": [],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "app/vendor",
     "test",
     "tests"
   ],
   "dependencies": {
-    "angular-route": "~1.4.7",
     "lodash": "~3.10.1",
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
     "Mana": "git@github.com:andrewgioia/Mana.git",
     "primer-css": "~2.4.0",
     "octicons": "~3.1.0"

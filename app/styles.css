@@ -29,9 +29,3 @@ mtg-card {
     vertical-align: top;
     padding: 20px;
     width: 60%; }
-
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
