@@ -1,7 +1,6 @@
 angular.module('mtg-app.auth', [
   'ngMessages',
   'ngRoute',
-  // 'mgcrea.ngStrap',
   'satellizer'
 ])
   .config(function($routeProvider, $authProvider) {
@@ -38,7 +37,8 @@ angular.module('mtg-app.auth', [
       .otherwise({
         redirectTo: '/'
       });
-      $authProvider.loginUrl = 'http://tesseract-api.herokuapp.com/auth/login';
+      $authProvider.loginUrl = 'https://tesseract-api.herokuapp.com/auth/login';
+      $authProvider.signupUrl = 'https://tesseract-api.herokuapp.com/auth/signup';
     $authProvider.google({
       clientId: '587791673437-u2c6ujn8ct3nihm0vaq9cb0f0ukd33f2.apps.googleusercontent.com'
     });
