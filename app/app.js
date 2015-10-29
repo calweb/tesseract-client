@@ -8,6 +8,7 @@
         'ngRoute',
         'ngAria',
         'ngMaterial',
+        'mtg-app.auth',
         'mtg-app.cards'
       ])
       .config(function ($routeProvider, $mdThemingProvider) {

@@ -1,8 +1,8 @@
 {
-  "name": "electron-boilerplate",
-  "productName": "Electron Boilerplate",
-  "identifier": "com.example.electron-boilerplate",
-  "description": "Starter for your Electron application. Out of the box ready for serious stuff.",
+  "name": "tesseract",
+  "productName": "Tesseract",
+  "identifier": "com.mtg.tesseract",
+  "description": "Play Magic The Gathering with Friends.",
   "version": "0.1.0",
   "author": "Calvin Webster <calweb@gmail.com>",
   "main": "background.js",

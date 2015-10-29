@@ -20,6 +20,9 @@
     "angular": "~1.4.7",
     "angular-route": "~1.4.7",
     "Mana": "git@github.com:andrewgioia/Mana.git",
-    "angular-material": "~0.11.4"
+    "angular-material": "~0.11.4",
+    "satellizer": "~0.12.5",
+    "angular-messages": "~1.4.7",
+    "angular-strap": "~2.3.4"
   }
 }

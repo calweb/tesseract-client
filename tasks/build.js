@@ -5,6 +5,7 @@ var Q = require('q');
 var gulp = require('gulp');
 var rollup = require('rollup');
 var less = require('gulp-less');
+var sass = require('gulp-sass');
 var jetpack = require('fs-jetpack');
 
 var utils = require('./utils');
@@ -18,6 +19,7 @@ var paths = {
     copyFromAppDir: [
         './node_modules/**',
         './vendor/**',
+        './auth/**',
         './images/**',
         './cards/**',
         './**/*.html',
@@ -100,8 +102,15 @@ var lessTask = function () {
     .pipe(less())
     .pipe(gulp.dest(destDir.path('stylesheets')));
 };
+var sassTask = function () {
+    return gulp.src('app/stylesheets/styles.scss')
+    .pipe(sass())
+    .pipe(gulp.dest(destDir.path('stylesheets')));
+};
 gulp.task('less', ['clean'], lessTask);
 gulp.task('less-watch', lessTask);
+gulp.task('sass', ['clean'], sassTask);
+gulp.task('sass-watch', sassTask);
 
 
 gulp.task('finalize', ['clean'], function () {
@@ -128,8 +137,8 @@ gulp.task('finalize', ['clean'], function () {
 gulp.task('watch', function () {
     gulp.watch('app/**/*.js', ['bundle-watch']);
     gulp.watch(paths.copyFromAppDir, { cwd: 'app' }, ['copy-watch']);
-    gulp.watch('app/**/*.less', ['less-watch']);
+    gulp.watch('app/**/*.scss', ['sass-watch']);
 });
 
 
-gulp.task('build', ['bundle', 'less', 'copy', 'finalize']);
+gulp.task('build', ['bundle', 'less', 'sass', 'copy', 'finalize']);
