@@ -1,6 +1,5 @@
 body {
   font-family: "Roboto", sans-serif;
-  background: #eee;
   -webkit-font-smoothing: antialiased; }
 
 hgroup {
@@ -10,6 +9,7 @@ mtg-card {
   position: relative;
   display: inline-block;
   padding: 0;
+  width: 100%;
   transition: margin 0.5s ease-in-out; }
 
 .logo {
@@ -20,36 +20,18 @@ mtg-card {
   padding: 0; }
   .card-results li {
     list-style-type: none; }
+  .card-results h3, .card-results h4, .card-results h5 {
+    margin: 1px; }
   .card-results img {
     position: relative;
     display: inline-block;
+    width: 35%;
     transition: all 0.8s ease;
     max-width: 150px; }
     .card-results img:hover {
-      position: relative;
-      transform: scale(2);
-      z-index: 10; }
+      position: relative; }
   .card-results .info {
     display: inline-block;
     vertical-align: top;
-    padding: 20px;
+    padding-left: 10px;
     width: 60%; }
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  /** associate font-family with font icons names */
-  font-family: "icomoon";
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
-  font-weight: normal;
-  font-style: normal;
-  speak: none;
-  text-decoration: inherit;
-  text-transform: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-home:before {
-  content: "\e900"; }

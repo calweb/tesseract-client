@@ -25,7 +25,7 @@
 
           $mdThemingProvider.theme('default')
             .primaryPalette('pink')
-            .accentPalette('orange');
+            // .accentPalette('orange');
 
       })
       .controller('MainCtrl', function ($scope) {

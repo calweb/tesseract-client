@@ -7,8 +7,33 @@
   <p>
     {{card.text}}
   </p>
-  <div class="btn-group">
-      <button ng-click="action()" class="btn btn-primary">{{actionText}}</button>
-  </div>
+  <md-menu>
+      <md-button aria-label="Open phone interactions menu" class="md-primary"  ng-click="$mdOpenMenu($event)">
+        <md-icon md-menu-origin md-font-library="material-icons">add_circle</md-icon>
+        ADD TO DECK
+      </md-button>
+      <md-menu-content width="4">
+        <md-menu-item>
+          <md-button ng-click="action()">
+            <md-icon md-font-library="material-icons" md-menu-align-target>book</md-icon>
+            Deck Name 1
+          </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-button ng-click="action()">
+            <md-icon md-font-library="material-icons" md-menu-align-target>book</md-icon>
+            Deck Name 2
+          </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-button ng-click="action()">
+            <md-icon md-font-library="material-icons" md-menu-align-target>book</md-icon>
+            Deck Name 3
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
 
 </div>

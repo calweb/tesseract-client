@@ -1,45 +1,24 @@
-<div class="container">
-  <section class="columns">
-    <div class="three-thirds column">
-      <h1>Find Cards</h1>
-    </div>
-  </section>
-  <div class="columns">
-    <div class="one-fifth column">
-      <nav class="menu">
-        <span class="menu-heading">Search</span>
-        <div class="menu-item selected" href="#">
+<section layout="row" flex>
+    <md-sidenav class="md-sidenav-left" md-is-locked-open="$mdMedia('gt-md')" layout-padding>
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Card Search</h1>
+      </md-toolbar>
+      <md-content layout-padding>
+        <md-input-container class="md-icon-float">
+          <label>Name</label>
+          <md-icon md-font-library="material-icons">find_in_page</md-icon>
           <input class="input-contrast input-block" type="text" ng-model="search.name" ng-keydown="cardResults(search.name)" name="name" value="" placeholder="search for card">
-        </div>
-        <a class="menu-item" href="#">
-          <span class="octicon octicon-person"></span>
-          Profile
-        </a>
-        <a class="menu-item" href="#">
-          <span class="octicon octicon-mail"></span>
-          Emails
-        </a>
-        <a class="menu-item" href="#">
-          <span class="octicon octicon-radio-tower"></span>
-          <span class="counter">3</span>
-          Notifications
-        </a>
-      </nav>
-
-    </div>
-
-    <div class="four-fifths column">
-      <div ng-show="searchResults.length === 0" class="blankslate spacious">
-        <h3>Sorry, no results found</h3>
-        <p>Please try your search again.</p>
+        </md-input-container>
+      </md-content>
+    </md-sidenav>
+    <md-content flex layout-padding>
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools"><span>{{searchResults.length}} results</span></h1>
+      </md-toolbar>
+      <div layout="column" layout-fill layout-align="top center" layout-padding>
+         <mtg-card ng-repeat="card in searchResults" class="card-results" card="card" action="alertMe(card.name)" action-text="Add to Deck"></mtg-card>
       </div>
-      <ul class="card-results">
-        <li ng-repeat="card in searchResults | filter:search">
-          <mtg-card card="card" action="alertMe(card.name)" action-text="Add to Deck"></mtg-card>
-        </li>
-      </ul>
 
-    </div>
-  </div>
+    </md-content>
 
-</div>
+  </section>
