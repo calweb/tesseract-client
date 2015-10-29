@@ -6,9 +6,11 @@
     angular
       .module('mtg-app', [
         'ngRoute',
+        'ngAria',
+        'ngMaterial',
         'mtg-app.cards'
       ])
-      .config(function ($routeProvider) {
+      .config(function ($routeProvider, $mdThemingProvider) {
         $routeProvider
           .when('/', {
             templateUrl: 'main.html',
@@ -20,6 +22,10 @@
           .otherwise({
             redirectTo: '/404'
           });
+
+          $mdThemingProvider.theme('default')
+            .primaryPalette('pink')
+            .accentPalette('orange');
 
       })
       .controller('MainCtrl', function ($scope) {
