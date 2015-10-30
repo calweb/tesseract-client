@@ -7,7 +7,7 @@ angular.module('mtg-app.auth')
           localStorage.setItem('userRole', res.data.role);
           // redirect to dashboard
           console.log("go to cards");
-          $location.path('/cards');
+          $location.path('/');
           // $alert({
           //   content: 'You have successfully logged in',
           //   animation: 'fadeZoomFadeDown',
