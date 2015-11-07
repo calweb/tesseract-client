@@ -1,13 +1,10 @@
 (function () { 'use strict';
-
-  (function () {
-    'use strict';
-
     angular
       .module('mtg-app', [
         'ngRoute',
         'ngAria',
         'ngMaterial',
+        'lodash',
         'mtg-app.auth',
         'mtg-app.cards'
       ])
@@ -45,8 +42,10 @@
       .controller('MainCtrl', function ($scope) {
         $scope.message = "Tesseract";
       });
-
-  })();
-
+  angular
+    .module('lodash', [])
+    .factory('_', function ($window) {
+      return $window._;
+    })
 })();
 //# sourceMappingURL=app.js.map

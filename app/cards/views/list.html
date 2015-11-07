@@ -1,3 +1,4 @@
+<a href="#/logout">logout</a>
 <section layout="row" flex>
     <md-sidenav class="md-sidenav-left" md-is-locked-open="$mdMedia('gt-md')" layout-padding>
       <md-toolbar class="md-theme-indigo">
@@ -16,7 +17,7 @@
         <h1 class="md-toolbar-tools"><span>{{searchResults.length}} results</span></h1>
       </md-toolbar>
       <div layout="column" layout-fill layout-align="top center" layout-padding>
-         <mtg-card ng-repeat="card in searchResults" class="card-results" card="card" action="alertMe(card.name)" action-text="Add to Deck"></mtg-card>
+         <mtg-card ng-repeat="card in searchResults" class="card-results" card="card" action="addCard(card)" action-text="Add to Deck"></mtg-card>
       </div>
 
     </md-content>
